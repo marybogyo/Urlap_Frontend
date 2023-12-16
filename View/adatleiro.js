@@ -6,7 +6,7 @@ export const adatLeiro={
         megjelenes: "Név",
         tipus: "text",
         placeholder: "",
-        pattern: "[A-Z][a-z]{3}",
+        pattern: "^[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű']{2,}$",//"[A-Z][a-z]{3}",
         value:"",
         szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie",
         required: true,

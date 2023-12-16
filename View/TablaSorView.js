@@ -8,11 +8,16 @@ export default class TablaSorView{
         this.htmlOsszerak();
         //megfogjuk a törlés gombot
         this.torlesElem = this.szElem.find(".torles:last");
+        this.modositElem= this.szElem.find(".modosit:last");
         /*console.log(this.torlesElem);*/
         this.torlesElem.on("click", ()=>{
-          console.log("törlés");
+          //console.log("törlés");
           this.trigger("sorTorles");
-    })
+        });
+        this.modositElem.on("click", ()=>{
+          //console.log("módosít");
+          this.objectTrigger("sorModosit");
+        })
 }
 
     htmlOsszerak() {
@@ -31,4 +36,9 @@ export default class TablaSorView{
         const esemenyem=new CustomEvent(e, {detail: this.#obj.kyra_id})
         window.dispatchEvent(esemenyem)
       }
+
+    objectTrigger(e){
+        const esemenyem=new CustomEvent(e, {detail: this.#obj})
+        window.dispatchEvent(esemenyem)
+    }
 }

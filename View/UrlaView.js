@@ -61,16 +61,17 @@ class UrlapView{
 
         }
 
+        txt += `<input type="number" id='modositoId' hidden />`;
         txt += `<div class="mb-3 mt-3">
                     <input type="submit"  
                     id="submit" 
                     value="Küld">
                     </div>`;
-        txt += `<div class="mb-3 mt-3">
+        /*txt += `<div class="mb-3 mt-3">
                     <input type="submit"  
-                    id="submit" 
+                    id="modosit" 
                     value="Módosít">
-                    </div>`;            
+                    </div>`;*/
         this.formElem.append(txt)
 
     }

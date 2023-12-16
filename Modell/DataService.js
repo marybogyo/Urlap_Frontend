@@ -6,17 +6,20 @@ getData(vegpont, callback){
     axios
     .get(vegpont)
     .then(function (response){
-    //console.log(response.data)
+        //console.log(response.data)
         callback(response.data);
     })
     .catch(function(error){
        //console.log(error);
     })
     .finally(function (){
-
+        let IdMezo = document.getElementById('modositoId');
+        IdMezo.value = "";
+        document.getElementById('submit').value = "Küld";
     });
 }
-async postData(vegpont, postAdat){
+async postData(vegpont, postAdat)
+{
     await axios
     .post(vegpont, {
         name: postAdat.Nev,
@@ -25,7 +28,7 @@ async postData(vegpont, postAdat){
       })
     .then(function (response){
         //console.log(response.data)
-        console.log("postban vagyok");
+        // console.log("postban vagyok");
     })
     .catch(function(error){
        //console.log(error);
@@ -34,27 +37,25 @@ async postData(vegpont, postAdat){
 
     });
 }
-putData(vegpont, id){
-    console.log(id);
-    axios
-    .delete(vegpont+"/"+id)
+async putData(vegpont, id, putAdat){
+    await axios
+    .put(vegpont+"/"+id, {
+        name: putAdat.Nev,
+        kor: putAdat.Kor,
+        neme: putAdat.Nem
+    })
     .then(function(response){
-        console.log(response);
-        frissitCallback();
+        // console.log(response);
+   
     })
-    .catch(function (error){
-        hibaCallback(error)
-    })
-    .finally(function(){
-        
-    }) 
+
 }
 deleteData(vegpont, id, hibaCallback, frissitCallback){
-    console.log(id);
+    // console.log(id);
     axios
     .delete(vegpont+"/"+id)
     .then(function(response){
-        console.log(response);
+        // console.log(response);
         frissitCallback();
     })
     .catch(function (error){
