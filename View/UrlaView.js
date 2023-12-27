@@ -62,10 +62,10 @@ class UrlapView{
         }
 
         txt += `<input type="number" id='modositoId' hidden />`;
-        txt += `<div class="mb-3 mt-3">
+        txt += `<div class="kuld">
                     <input type="submit"  
                     id="submit" 
-                    value="Küld">
+                    value="  Küldés  ">
                     </div>`;
         /*txt += `<div class="mb-3 mt-3">
                     <input type="submit"  

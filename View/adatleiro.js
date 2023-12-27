@@ -28,5 +28,13 @@ export const adatLeiro={
         value:"",
         szoveg: "Nő vagy férfi",
         required: true,
+    },
+
+    Modosit:{
+        megjelenes:"Módosít"
+    },
+
+    Torol:{
+        megjelenes:"Törlés"
     }
 }
