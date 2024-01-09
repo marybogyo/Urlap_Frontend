@@ -18,7 +18,7 @@ class UrlapView{
          * 3. ebben az eseményben összegyűjtöm a form adatait
          * 4. és felküldöm a kontrollernek"
          */
-        this.submitElem=this.formElem.find("#submit");
+        this.submitElem=this.formElem.find("#submit").css("width", "80px");
         this.submitElem.on("click", (event)=>{
             event.preventDefault();
             this.#urlapValid=true
@@ -65,7 +65,7 @@ class UrlapView{
         txt += `<div class="kuld">
                     <input type="submit"  
                     id="submit" 
-                    value="  Küldés  ">
+                    value="Küld">
                     </div>`;
         /*txt += `<div class="mb-3 mt-3">
                     <input type="submit"  

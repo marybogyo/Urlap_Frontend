@@ -5,7 +5,7 @@ export default class TablaSorView{
         this.#obj= obj;
         this.szElem= szElem;
         //console.log(this.#obj);
-        this.htmlOsszerak();
+        this.htmlOsszerak()
         //megfogjuk a törlés gombot
         this.torlesElem = this.szElem.find(".torles:last");
         this.modositElem= this.szElem.find(".modosit:last");

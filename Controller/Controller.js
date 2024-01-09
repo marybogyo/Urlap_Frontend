@@ -69,6 +69,6 @@ mezoToltesModositAdatokkal(adatok)
     korMezo.value = adatok.kor;
     nemMezo.value = adatok.neme;
     IdMezo.value = adatok.kyra_id;
-    document.getElementById('submit').value = "Módosítás";
+    document.getElementById('submit').value = "Módosít";
 }
 }

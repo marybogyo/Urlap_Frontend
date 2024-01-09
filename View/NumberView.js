@@ -5,7 +5,7 @@ export default class NumberUrlapView{
     constructor(szElem, obj, key){
         this.szElem=szElem;
         this.obj=obj;
-        this.key=key;
+        this.key=key; 
         this.numberUrlapElem();
         this.inputElem=$(`#${this.key}`);
         this.#value=this.inputElem.val();

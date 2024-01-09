@@ -1,5 +1,5 @@
 body {
-    background-image: url('háttér.jpg');
+    background-image: url();
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -11,5 +11,11 @@ body {
 
 .kuld{
     margin: auto;
+    margin-bottom: 20px;
 
+}
+.torles{
+    width: 80px;
+    background-color: red;
+    margin-left: 20px;
 }
